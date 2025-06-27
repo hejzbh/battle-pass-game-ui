@@ -1,0 +1,35 @@
+import ImageGradient from "@/components/ui/ImageGradient";
+import bpassBackgroundImage from "@/assets/images/bpass-background.webp";
+import Header from "./Header";
+import Tabs from "@/components/ui/Tabs";
+import MissionList from "./Missions/MissionList";
+import FavoriteList from "./Favorites/FavoriteList";
+
+interface BattlePassProps {
+  variant: "standard" | "premium";
+  className?: string;
+  onClose: () => void;
+}
+
+const BattlePass = ({
+  className = "",
+  variant = "standard",
+  onClose,
+}: BattlePassProps) => {
+  return (
+    <section className="w-full h-screen fixed top-0 left-0">
+      <ImageGradient imageSrc={bpassBackgroundImage} />
+      <Header onClose={onClose} />
+      <div className="grid grid-cols-[25%,75%] gap-10 mt-[40px] pl-10">
+        <Tabs
+          tabs={[
+            { label: "Missions", component: <MissionList /> },
+            { label: "Favorites", component: <FavoriteList /> },
+          ]}
+        />
+      </div>
+    </section>
+  );
+};
+
+export default BattlePass;
