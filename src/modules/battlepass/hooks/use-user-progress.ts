@@ -3,6 +3,6 @@ export const useUserProgress = () => {
     season: 7,
     week: 7,
     level: 2,
-    currentLevelXp: 400,
+    xp: 400,
   };
 };

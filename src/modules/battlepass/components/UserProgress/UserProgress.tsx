@@ -8,7 +8,7 @@ interface UserProgressProps {
 }
 
 const UserProgress = ({ className = "" }: UserProgressProps) => {
-  const { season, currentLevelXp, level, week } = useUserProgress();
+  const { season, xp, level, week } = useUserProgress();
   return (
     <div className={`flex items-start ${className}`}>
       {/** Season */}
@@ -25,7 +25,7 @@ const UserProgress = ({ className = "" }: UserProgressProps) => {
         className="ml-[85px]"
         rhombusElementClassName="mt-[-45px] pt-[40px]"
         level={level}
-        currentXP={currentLevelXp}
+        currentXP={xp}
       />
     </div>
   );
