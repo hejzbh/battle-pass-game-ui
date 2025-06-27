@@ -1,6 +1,6 @@
 import ImageGradient from "@/components/ui/ImageGradient";
 import bpassBackgroundImage from "@/assets/images/bpass-background.webp";
-import Header from "./Header";
+import Header from "./Header/Header";
 import Tabs from "@/components/ui/Tabs";
 import MissionList from "./Missions/MissionList";
 import FavoriteList from "./Favorites/FavoriteList";

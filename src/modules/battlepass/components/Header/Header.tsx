@@ -1,5 +1,5 @@
 import Text from "@/components/ui/Text";
-import UserProgress from "./UserProgress/UserProgress";
+import UserProgress from "../UserProgress/UserProgress";
 import HeaderActions from "./HeaderActions";
 
 interface HeaderProps {
