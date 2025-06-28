@@ -37,7 +37,7 @@ const Tabs: React.FC<TabsProps> = ({
               key={index}
               title="Click to pen tab"
               onClick={() => {
-                playEffect(changingTabAudio, { volume: 0.15 });
+                playEffect(changingTabAudio, { volume: 0.1 });
                 setActiveIndex(index);
               }}
               className={`text-white flex items-center pb-1 space-x-4  ${

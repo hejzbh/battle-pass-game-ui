@@ -7,6 +7,8 @@ import checkFillImage from "@/assets/images/check-mark-fill.webp";
 import checkEmptyImage from "@/assets/images/check-mark-empty.webp";
 import ProgressBar from "@/components/ui/ProgressBar";
 import CountdownTimer from "@/components/ui/Countdown";
+import useAudioEffects from "../../hooks/use-audio-effects";
+import saveAudio from "@/assets/audio/save.mp3";
 
 interface MissionItemProps {
   className?: string;
@@ -14,7 +16,8 @@ interface MissionItemProps {
 }
 
 const MissionItem = ({ className = "", mission }: MissionItemProps) => {
-  const { checkIsFavorite, removeFavorite, addFavorite } = useFavorites();
+  const { checkIsFavorite, toggleFavorite } = useFavorites();
+  const { playEffect } = useAudioEffects();
 
   const isFavorited = checkIsFavorite(mission.id);
 
@@ -35,11 +38,10 @@ const MissionItem = ({ className = "", mission }: MissionItemProps) => {
             {/** Favorite */}
             <button
               title={isFavorited ? "Remove from favorites" : "Add to favorites"}
-              onClick={() =>
-                isFavorited
-                  ? removeFavorite(mission.id)
-                  : addFavorite(mission.id)
-              }
+              onClick={() => {
+                playEffect(saveAudio, { volume: 0.05 });
+                toggleFavorite(mission.id);
+              }}
             >
               <img
                 loading="lazy"
