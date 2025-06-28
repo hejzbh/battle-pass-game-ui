@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Tabs from "@/components/ui/Tabs";
 import MissionList from "./Missions/MissionList";
 import FavoriteList from "./Favorites/FavoriteList";
+import RewardTrack from "./Rewards";
 
 interface BattlePassProps {
   variant: "standard" | "premium";
@@ -27,6 +28,7 @@ const BattlePass = ({
             { label: "Favorites", component: <FavoriteList /> },
           ]}
         />
+        <RewardTrack />
       </div>
     </section>
   );

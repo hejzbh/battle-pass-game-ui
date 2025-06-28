@@ -14,7 +14,7 @@ interface MissionItemProps {
 }
 
 const MissionItem = ({ className = "", mission }: MissionItemProps) => {
-  const { checkIsFavorite, toggleFavorite } = useFavorites("mission-favorites");
+  const { checkIsFavorite, removeFavorite, addFavorite } = useFavorites();
 
   const isFavorited = checkIsFavorite(mission.id);
 
@@ -35,7 +35,11 @@ const MissionItem = ({ className = "", mission }: MissionItemProps) => {
             {/** Favorite */}
             <button
               title={isFavorited ? "Remove from favorites" : "Add to favorites"}
-              onClick={() => toggleFavorite(mission.id)}
+              onClick={() =>
+                isFavorited
+                  ? removeFavorite(mission.id)
+                  : addFavorite(mission.id)
+              }
             >
               <img
                 loading="lazy"
