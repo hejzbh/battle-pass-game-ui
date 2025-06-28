@@ -17,10 +17,10 @@ const BattlePass = ({
   onClose,
 }: BattlePassProps) => {
   return (
-    <section className="w-full h-screen fixed top-0 left-0">
+    <section className={`w-full h-screen fixed top-0 left-0 ${className}`}>
       <ImageGradient imageSrc={bpassBackgroundImage} />
       <Header onClose={onClose} />
-      <div className="grid grid-cols-[25%,75%] gap-10 mt-[40px] pl-10">
+      <div className="grid grid-cols-[25%,75%] gap-10 mt-[40px] pl-10 h-full">
         <Tabs
           tabs={[
             { label: "Missions", component: <MissionList /> },

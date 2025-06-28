@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Text from "@/components/ui/Text";
+import React from "react";
+import ProgressBar from "@/components/ui/ProgressBar";
 
 type LevelProgressBarProps = {
   className?: string;
@@ -12,33 +12,23 @@ const LevelProgressBar: React.FC<LevelProgressBarProps> = ({
   maxXP,
   className = "",
 }) => {
-  const [animatedWidth, setAnimatedWidth] = useState(0);
-  const percentage = Math.min((currentXP / maxXP) * 100, 100);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setAnimatedWidth(percentage);
-    }, 50); // short delay for smoother animation
-
-    return () => clearTimeout(timeout);
-  }, [percentage]);
-
   return (
     <div className={`w-full max-w-md ${className}`}>
-      <div className="flex justify-between text-xs text-white/60 mb-1 px-1">
-        <Text size="xxs" className="text-white/50">
-          {currentXP} XP
-        </Text>
-        <Text size="xxs" className="text-white/50">
-          {maxXP} XP
-        </Text>
-      </div>
-      <div className="w-full h-2 bg-black/30 border-[0.5px] border-[#313e37] overflow-hidden">
-        <div
-          className="h-full bg-level-bar-gradient transition-all duration-700 ease-out"
-          style={{ width: `${animatedWidth}%` }}
-        />
-      </div>
+      <ProgressBar
+        value={currentXP}
+        maxValue={maxXP}
+        labelAtStart={{
+          size: "xxs",
+          className: "text-white/50",
+          children: currentXP + " XP",
+        }}
+        labelAtEnd={{
+          size: "xxs",
+          className: "text-white/50",
+          children: maxXP + " XP",
+        }}
+        gradientLine
+      />
     </div>
   );
 };

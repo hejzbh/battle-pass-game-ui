@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Text from "./Text";
 import missionsImage from "@/assets/images/missions-icon.png";
+import useAudioEffects from "@/modules/battlepass/hooks/use-audio-effects";
+
+import changingTabAudio from "@/assets/audio/changing-tab.mp3";
 
 type TabItem = {
   label: string;
@@ -10,6 +13,7 @@ type TabItem = {
 type TabsProps = {
   tabs: TabItem[];
   className?: string;
+  tabActiveClassName?: string;
   tabButtonClassName?: string;
   activeTabButtonClassName?: string;
 };
@@ -17,13 +21,13 @@ type TabsProps = {
 const Tabs: React.FC<TabsProps> = ({
   tabs,
   className = "",
-  tabButtonClassName = "",
-  activeTabButtonClassName = "",
+  tabActiveClassName,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { playEffect } = useAudioEffects();
 
   return (
-    <div className={className}>
+    <div className={`overflow-hidden ${className}`}>
       {/* Tabs Header */}
       <div className="flex space-x-6 flex-wrap">
         {tabs.map((tab, index) => {
@@ -32,7 +36,10 @@ const Tabs: React.FC<TabsProps> = ({
             <button
               key={index}
               title="Click to pen tab"
-              onClick={() => setActiveIndex(index)}
+              onClick={() => {
+                playEffect(changingTabAudio, { volume: 0.15 });
+                setActiveIndex(index);
+              }}
               className={`text-white flex items-center pb-1 space-x-4  ${
                 isActive
                   ? "opacity-100 border-b-[1.6px] border-white"
@@ -55,7 +62,11 @@ const Tabs: React.FC<TabsProps> = ({
       </div>
 
       {/* Active Tab Content */}
-      <div>{tabs[activeIndex]?.component}</div>
+      <div
+        className={`mt-5 h-full overflow-y-scroll scrollbar-hide pb-[500px] ${tabActiveClassName}`}
+      >
+        {tabs[activeIndex]?.component}
+      </div>
     </div>
   );
 };

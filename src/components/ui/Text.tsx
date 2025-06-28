@@ -1,6 +1,6 @@
 import React from "react";
 
-type TextProps = {
+export type TextProps = {
   className?: string;
   variant?: "p" | "span";
   size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";

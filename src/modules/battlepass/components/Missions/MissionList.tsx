@@ -1,7 +1,177 @@
-import React from "react";
+import { Mission } from "@/types/mission-types";
+import MissionItem from "./MissionItem";
+
+const missionItems: Mission[] = [
+  {
+    id: "1",
+    title: "Complete 5 Matches",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+    progress: 50,
+    timeLeftInSeconds: 10,
+    isCompleted: false,
+    rewardXp: 1000,
+  },
+  {
+    id: "2",
+    title: "Win a Ranked Game",
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+
+    progress: 100,
+
+    isCompleted: true,
+    rewardXp: 800,
+  },
+  {
+    id: "3",
+    title: "Collect 10 Items",
+    progress: 30,
+    description: "Lorem ipsum is simply dummy text of pri",
+
+    isCompleted: false,
+    rewardXp: 500,
+  },
+  {
+    id: "4",
+    title: "Login for 3 Days",
+    progress: 75,
+    timeLeftInSeconds: 130,
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+    isCompleted: false,
+    rewardXp: 700,
+  },
+  {
+    id: "5",
+    title: "Play with Friends",
+    progress: 20,
+
+    description:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+    isCompleted: false,
+    rewardXp: 600,
+  },
+  {
+    id: "6",
+    title: "Earn 1000 XP",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 90,
+    timeLeftInSeconds: 0,
+    isCompleted: false,
+    rewardXp: 900,
+  },
+  {
+    id: "7",
+    title: "Win 3 Times in a Row",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 0,
+
+    isCompleted: false,
+    rewardXp: 1200,
+  },
+  {
+    id: "8",
+    title: "Complete All Daily Missions",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 60,
+
+    isCompleted: false,
+    rewardXp: 1000,
+  },
+  {
+    id: "9",
+    title: "Deal 5000 Damage",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 45,
+
+    isCompleted: false,
+    rewardXp: 1100,
+  },
+  {
+    id: "10",
+    title: "Revive 3 Teammates",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 10,
+
+    isCompleted: false,
+    rewardXp: 400,
+  },
+  {
+    id: "11",
+    title: "Capture 5 Objectives",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 80,
+    timeLeftInSeconds: 0,
+    isCompleted: true,
+    rewardXp: 950,
+  },
+  {
+    id: "12",
+    title: "Destroy 3 Turrets",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 25,
+    timeLeftInSeconds: 120,
+    isCompleted: false,
+    rewardXp: 650,
+  },
+  {
+    id: "13",
+    title: "Survive for 15 Minutes",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 70,
+    timeLeftInSeconds: 0,
+    isCompleted: false,
+    rewardXp: 750,
+  },
+  {
+    id: "14",
+    title: "Get 10 Headshots",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 40,
+    timeLeftInSeconds: 360,
+    isCompleted: false,
+    rewardXp: 850,
+  },
+  {
+    id: "15",
+    title: "Destroy 3 Turrets",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 25,
+    timeLeftInSeconds: 120,
+    isCompleted: false,
+    rewardXp: 650,
+  },
+  {
+    id: "163",
+    title: "Survive for 15 Minutes",
+    description: "Lorem ipsum is simply dummy text of pri",
+    progress: 70,
+    timeLeftInSeconds: 0,
+    isCompleted: false,
+    rewardXp: 750,
+  },
+  {
+    id: "17",
+    title: "Get 10 Headshots",
+    description: "Last mission",
+    progress: 40,
+    timeLeftInSeconds: 360,
+    isCompleted: false,
+    rewardXp: 850,
+  },
+];
 
 const MissionList = () => {
-  return <div>MissionList</div>;
+  return (
+    <ul className="space-y-3">
+      {missionItems?.map((mission) => (
+        <li key={mission?.id}>
+          <MissionItem mission={mission} />
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default MissionList;
