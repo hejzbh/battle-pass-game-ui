@@ -24,7 +24,9 @@ const HeaderActions = ({
   }, []); // eslint-disable-line
 
   return (
-    <div className={`flex items-start space-x-[130px] ${className}`}>
+    <div
+      className={`flex items-start space-x-[50px] 2xl:space-x-[130px] ${className}`}
+    >
       {/** */}
       <InfoButton />
 

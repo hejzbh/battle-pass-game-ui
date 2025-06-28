@@ -1,0 +1,182 @@
+{
+  "STANDARD": [
+    {
+      "id": "std-001",
+      "xpThreshold": 100,
+      "name": "Standard Reward 1",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "CLAIMED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-002",
+      "xpThreshold": 200,
+      "name": "Standard Reward 2",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "CLAIMABLE",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-003",
+      "xpThreshold": 300,
+      "name": "Standard Reward 3",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-004",
+      "xpThreshold": 400,
+      "name": "Standard Reward 4",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-005",
+      "xpThreshold": 500,
+      "name": "Standard Reward 5",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-006",
+      "xpThreshold": 600,
+      "name": "Standard Reward 6",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-007",
+      "xpThreshold": 700,
+      "name": "Standard Reward 7",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-008",
+      "xpThreshold": 800,
+      "name": "Standard Reward 8",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-009",
+      "xpThreshold": 900,
+      "name": "Standard Reward 9",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-010",
+      "xpThreshold": 1000,
+      "name": "Standard Reward 10",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-011",
+      "xpThreshold": 1100,
+      "name": "Standard Reward 11",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    },
+    {
+      "id": "std-012",
+      "xpThreshold": 1200,
+      "name": "Standard Reward 12",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "STANDARD"
+    }
+  ],
+  "PREMIUM": [
+    {
+      "id": "prm-001",
+      "xpThreshold": 150,
+      "name": "Premium Reward 1",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-002",
+      "xpThreshold": 300,
+      "name": "Premium Reward 2",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-003",
+      "xpThreshold": 450,
+      "name": "Premium Reward 3",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-004",
+      "xpThreshold": 600,
+      "name": "Premium Reward 4",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-005",
+      "xpThreshold": 750,
+      "name": "Premium Reward 5",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-006",
+      "xpThreshold": 900,
+      "name": "Premium Reward 6",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-007",
+      "xpThreshold": 1050,
+      "name": "Premium Reward 7",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-008",
+      "xpThreshold": 1200,
+      "name": "Premium Reward 8",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-009",
+      "xpThreshold": 1350,
+      "name": "Premium Reward 9",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    },
+    {
+      "id": "prm-010",
+      "xpThreshold": 1500,
+      "name": "Premium Reward 10",
+      "imageUrl": "https://i.ibb.co/gFQZ7MMH/image-1.webp",
+      "status": "LOCKED",
+      "tier": "PREMIUM"
+    }
+  ]
+}
