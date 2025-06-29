@@ -20,6 +20,16 @@ module.exports = {
       fontFamily: {
         gilroy: ["Gilroy", "sans-serif"],
       },
+      keyframes: {
+        "spin-claim": {
+          "0%": { transform: "rotateY(0deg) scale(1)", opacity: 1 },
+          "50%": { transform: "rotateY(180deg) scale(1.2)", opacity: 0.7 },
+          "100%": { transform: "rotateY(360deg) scale(1)", opacity: 1 },
+        },
+      },
+      animation: {
+        "spin-claim": "spin-claim 0.8s ease-in-out",
+      },
       backgroundImage: {
         "standard-gradient":
           "linear-gradient(to right, rgba(0, 26, 8, 0.853) 0%, rgba(8, 11, 8, 1) 100%)",

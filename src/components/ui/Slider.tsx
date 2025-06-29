@@ -37,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({
         <button
           title="Back"
           onClick={scrollLeft}
-          className="transition bg-white/5 p-3 px-4 hover:opacity-70"
+          className="transition bg-white/5 p-3 px-4 hover:opacity-70 border-0 outline-0"
           aria-label="Scroll Left"
         >
           <img
@@ -51,7 +51,7 @@ const Slider: React.FC<SliderProps> = ({
         <button
           title="Next"
           onClick={scrollRight}
-          className="transition bg-white/5 p-3 px-4 hover:opacity-70"
+          className="transition bg-white/5 p-3 px-4 hover:opacity-70 border-0 outline-0"
           aria-label="Scroll Right"
         >
           <img

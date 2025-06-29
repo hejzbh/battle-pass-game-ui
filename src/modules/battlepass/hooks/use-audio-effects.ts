@@ -15,7 +15,7 @@ const useAudioEffects = () => {
     }
 
     const audio = new Audio(src);
-    audio.volume = options.volume ?? 1;
+    audio.volume = options.volume ?? 0.2;
     audio.playbackRate = options.playbackRate ?? 1;
 
     // Play & cleanup
@@ -31,7 +31,7 @@ const useAudioEffects = () => {
       audio.pause();
       audio.currentTime = 0;
       audioRef.current = null;
-    }, 1000); // Stops after 1s
+    }, 2000); // Stops after 1s
   };
 
   return { playEffect };

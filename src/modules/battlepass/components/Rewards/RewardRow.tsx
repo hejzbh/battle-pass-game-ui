@@ -1,5 +1,5 @@
 import Text from "@/components/ui/Text";
-import { RewardItem, RewardTier } from "@/types/reward-types";
+import { RewardItem, RewardStatus, RewardTier } from "@/types/reward-types";
 
 import rewardsData from "@/modules/battlepass/data/rewards.json";
 import RewardCard from "./RewardCard";
@@ -21,11 +21,27 @@ const RewardRow = ({ className = "", tier }: RewardRowProps) => {
 
       {/** List */}
       <ul className="flex items-center space-x-7 pl-14">
-        {(rewardsData[tier] as RewardItem[])?.map((reward: RewardItem) => (
-          <li key={reward.id}>
-            <RewardCard item={reward} showXP={tier !== RewardTier.PREMIUM} />
-          </li>
-        ))}
+        {(rewardsData[tier] as RewardItem[])?.map(
+          (reward: RewardItem, i: number) => (
+            <li key={reward.id}>
+              <RewardCard
+                onClaim={() => {
+                  console.log("Claimed");
+                }}
+                item={reward}
+                showXP={tier !== RewardTier.PREMIUM}
+                status={
+                  i === 0
+                    ? RewardStatus.CLAIMED
+                    : i === 1
+                    ? RewardStatus.CLAIMABLE
+                    : RewardStatus.LOCKED
+                }
+                color={i === 0 ? "#00B3FF" : i === 1 ? "#2F00FF" : "#FF0000"}
+              />
+            </li>
+          )
+        )}
       </ul>
     </div>
   );

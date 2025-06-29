@@ -21,7 +21,7 @@ const BattlePass = ({
     <section className={`w-full h-screen fixed top-0 left-0 ${className}`}>
       <ImageGradient imageSrc={bpassBackgroundImage} />
       <Header onClose={onClose} />
-      <div className="grid grid-cols-[25%,73%] justify-between gap-10 mt-[40px] pl-10 h-full">
+      <div className="grid grid-cols-[25%,73%] justify-between gap-10 mt-[40px] pl-10">
         <Tabs
           tabs={[
             { label: "Missions", component: <MissionList /> },
