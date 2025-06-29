@@ -37,7 +37,7 @@ const Header = ({ className = "", onClose }: HeaderProps) => {
       </div>
 
       {/** User Progress */}
-      <UserProgress className="relative ml-[-150px] flex-[1]" />
+      <UserProgress className="relative mainBreakPoint:ml-[-150px] flex-[1]" />
 
       {/** Other (information , esc & more) */}
       <HeaderActions onESC={onClose} />

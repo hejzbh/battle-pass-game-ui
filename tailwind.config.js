@@ -15,6 +15,8 @@ module.exports = {
 
       "2xl": "1700px",
       // => @media (min-width: 1280px) { ... }
+
+      mainBreakPoint: "1520px",
     },
     extend: {
       fontFamily: {
