@@ -33,6 +33,7 @@ const BattlePass = ({
           ExtraComponent={
             <WeeksPagination currentWeek={week} className="mt-5" />
           }
+          ExtraComponentVisibleOnlyAt={0}
         />
         <RewardTrack />
       </div>

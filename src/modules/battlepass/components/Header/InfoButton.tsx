@@ -11,14 +11,15 @@ const InfoButton: React.FC = () => {
             "polygon(30% 0%, 70% 0%, 100% 0, 99% 55%, 50% 100%, 50% 100%, 0 55%, 0 0)",
         }}
       >
-        <button
+        <a
+          href="#wiki"
           title="More information"
-          className="backdrop:blur-[5px] bg-white/10 rounded-[16px] p-[6px] px-4 rotate-[-9deg] mt-3 transition-all duration-300 ease-in-out hover:bg-green-500"
+          className="backdrop:blur-[5px] block bg-white/10 rounded-[16px] p-[6px] px-4 rotate-[-9deg] mt-3 transition-all duration-300 ease-in-out hover:bg-green-500"
         >
           <Text size="md" className="text-white !font-[900]">
             Information
           </Text>
-        </button>
+        </a>
       </div>
       <div
         className="bg-[#2CBD5A]/20 p-1 min-h-[120px] min-w-[140px] absolute bottom-[-15px] left-0 right-0  z-[-1]"

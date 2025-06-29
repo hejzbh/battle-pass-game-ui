@@ -55,7 +55,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
   return (
     <Text
       size="md"
-      className={`text-orange-400 !font-[400] p-1 px-2 bg-white/5 ${className}`}
+      className={` ${
+        remainingSeconds === 0 ? "text-[#03fe9f]" : "text-orange-400"
+      } !font-[400] p-1 px-2 bg-white/5 ${className}`}
     >
       {formatTime(remainingSeconds)}
     </Text>
