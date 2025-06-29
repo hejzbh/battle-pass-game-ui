@@ -13,10 +13,15 @@ module.exports = {
 
       xl: "1280px",
 
-      "2xl": "1700px",
-      // => @media (min-width: 1280px) { ... }
+      "1366px": "1368px",
 
-      mainBreakPoint: "1520px",
+      "1920px": "1920px",
+
+      "2560px": "2560px",
+
+      "3440px": "3440px",
+
+      "3840px": "3840px",
     },
     extend: {
       fontFamily: {

@@ -26,7 +26,7 @@ const CurrentWeek = ({
       </div>
 
       <Button
-        className="!max-w-[150px] bottom-[-27px] absolute left-[50%] mainBreakPoint:left-[62%] translate-x-[-50%]"
+        className="!max-w-[150px] bottom-[-23px] 1920px:bottom-[-27px] absolute left-[50%] 1520px:left-[62%] translate-x-[-50%]"
         variant="primary"
       >
         <Text size="xxs" className="uppercase text-white !font-[500]">

@@ -10,7 +10,7 @@ const RewardTrack = ({ className = "" }: RewardTrackProps) => {
   return (
     <div className={`${className} pb-10`}>
       <Slider>
-        <div className="space-y-14 pt-7">
+        <div className="space-y-6 1366px:space-y-14 pt-7">
           <RewardRow tier={RewardTier.STANDARD} />
           <RewardRow tier={RewardTier.PREMIUM} />
         </div>

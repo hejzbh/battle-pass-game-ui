@@ -17,7 +17,7 @@ const UserProgress = ({ className = "" }: UserProgressProps) => {
       {/** Week */}
       <CurrentWeek
         week={week}
-        className="!mt-[-75px] pt-[55px] ml-[-5px] relative"
+        className="mt-[-92px] 1920px:!mt-[-75px] pt-[55px] ml-[-5px] relative"
       />
 
       {/** Level */}

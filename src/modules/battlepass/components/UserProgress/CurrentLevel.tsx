@@ -47,7 +47,7 @@ const CurrentLevel = ({
       </div>
 
       {/** More info about level */}
-      <div className="max-w-[260px] mainBreakPoint:max-w-[340px] p-3">
+      <div className="max-w-[260px] 1520px:max-w-[340px] p-3">
         <Text size="sm" className="text-white uppercase font-[500]">
           Your level
         </Text>

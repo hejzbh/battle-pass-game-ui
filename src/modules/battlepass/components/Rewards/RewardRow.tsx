@@ -14,7 +14,7 @@ const RewardRow = ({ className = "", tier }: RewardRowProps) => {
     <div className={`relative ${className}`}>
       <Text
         size="lg"
-        className="text-white rotate-[-90deg] absolute top-[50%] translate-y-[-50%] left-[-2.5%] min-w-[105px]"
+        className="text-white rotate-[-90deg] absolute top-[50%] translate-y-[-50%] left-[-3.5%] 1920px:left-[-2.5%] 2560px:left-[-1.8%] min-w-[105px]"
       >
         {tier?.toString()?.toUpperCase()}
       </Text>

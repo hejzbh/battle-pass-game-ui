@@ -35,7 +35,7 @@ html {
   font-size: 16px;
 }
 
-@media (max-width: 1520px) {
+@media (max-width: 1600px) {
   html {
     font-size: 11px;
   }

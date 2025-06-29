@@ -65,7 +65,7 @@ const RewardCard = ({
       )}
 
       <div
-        className={`bg-white/10 border-[1px]  border-white/30 p-4 min-w-[230px] h-[285px] overflow-visible relative ${className}  ${
+        className={`bg-white/10 border-[1px] flex flex-col justify-between  border-white/30 p-4 min-w-[210px] 1920px:min-w-[240px] h-[230px] 1920px:h-[285px] overflow-visible relative ${className}  ${
           isRotating ? "animate-spin-claim" : ""
         }`}
         style={{
@@ -79,16 +79,14 @@ const RewardCard = ({
         >
           {item.name}
         </Text>
-
-        <div className="mt-5 flex flex-col justify-start items-center  h-full">
-          <img
-            src={item.imageUrl}
-            alt="Reward"
-            width={150}
-            height={150}
-            className={`w-full h-full max-w-[150px] max-h-[150px] mx-auto `}
-          />
-
+        <img
+          src={item.imageUrl}
+          alt="Reward"
+          width={150}
+          height={150}
+          className={`w-full h-full max-w-[130px] max-h-[130px] 1520px:max-w-[150px] 1520px:max-h-[150px] mx-auto `}
+        />
+        <div className="mt-5 flex flex-col justify-start items-center  ">
           {(isClaimable || isClaimed) && (
             <Button
               onClick={() => {

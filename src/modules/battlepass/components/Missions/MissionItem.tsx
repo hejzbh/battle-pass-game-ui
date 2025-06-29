@@ -31,7 +31,7 @@ const MissionItem = ({ className = "", mission }: MissionItemProps) => {
       <div className="gradient-border-top"></div>
 
       {/** Content */}
-      <main className="min-h-[120px] flex flex-col justify-between w-full">
+      <main className="min-h-[100px] 1366px:min-h-[120px] flex flex-col justify-between w-full">
         <div className="flex items-center space-x-6 justify-between">
           <Text size="sm" className="text-white/60 !font-[400] max-w-[84%]">
             {mission?.description}
