@@ -47,7 +47,7 @@ const RewardCard = ({
 
     setIsRotating(true);
 
-    // Stop animation after it completes (duration: 1s here)
+    // Stop animation after it completes
     setTimeout(() => {
       setIsRotating(false);
     }, 2000);
@@ -99,14 +99,10 @@ const RewardCard = ({
                 startRotateAnimation();
               }}
               className="max-w-fit mx-auto"
-              variant={
-                status === RewardStatus.CLAIMABLE ? "primary" : "secondary"
-              }
+              variant={isClaimable ? "primary" : "secondary"}
             >
               <Text size="xxs" className="text-white  uppercase !font-[400]">
-                {status === RewardStatus.CLAIMABLE
-                  ? "Claim reward"
-                  : "Already claimed"}
+                {isClaimable ? "Claim reward" : "Already claimed"}
               </Text>
             </Button>
           )}

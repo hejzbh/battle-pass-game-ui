@@ -28,9 +28,14 @@ module.exports = {
           "50%": { transform: "rotateY(180deg) scale(1.2)", opacity: 0.7 },
           "100%": { transform: "rotateY(360deg) scale(1)", opacity: 1 },
         },
+        "once-spin": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "spin-claim": "spin-claim 0.8s ease-in-out",
+        "once-spin": "once-spin 0.8s ease-in-out",
       },
       backgroundImage: {
         "standard-gradient":

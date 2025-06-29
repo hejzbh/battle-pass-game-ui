@@ -46,7 +46,6 @@ const MissionItem = ({ className = "", mission }: MissionItemProps) => {
                 playEffect(saveAudio, { volume: 0.05 });
                 toggleFavorite(mission.id);
 
-                if (isFavorited) return;
                 setIsAnimating(true);
                 setTimeout(() => setIsAnimating(false), 300);
               }}

@@ -19,7 +19,7 @@ const CurrentLevel = ({
   maxXP = 700,
 }: CurrentLevelProps) => {
   return (
-    <div className={`flex items-center relative space-x-4 ${className}`}>
+    <div className={`flex items-center relative space-x-4 group ${className}`}>
       {/** Rhombus element, current level */}
       <div className="relative">
         <div
@@ -32,14 +32,18 @@ const CurrentLevel = ({
             lvl
           </Text>
         </div>
-        <img
-          src={badgeImage}
-          alt="Badge"
-          loading="lazy"
-          width={55}
-          height={55}
-          className="absolute left-[50%] translate-x-[-50%] bottom-[-50%] translate-y-[-50%]"
-        />
+        <div className="absolute left-[50%] translate-x-[-50%] bottom-[-50%] translate-y-[-50%] ">
+          <div className="animate-once-spin">
+            <img
+              src={badgeImage}
+              alt="Badge"
+              loading="lazy"
+              width={55}
+              height={55}
+              className=" group-hover:animate-once-spin"
+            />
+          </div>
+        </div>
       </div>
 
       {/** More info about level */}
