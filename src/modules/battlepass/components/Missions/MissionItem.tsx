@@ -9,6 +9,7 @@ import ProgressBar from "@/components/ui/ProgressBar";
 import CountdownTimer from "@/components/ui/Countdown";
 import useAudioEffects from "../../hooks/use-audio-effects";
 import saveAudio from "@/assets/audio/save.mp3";
+import { useState } from "react";
 
 interface MissionItemProps {
   className?: string;
@@ -16,6 +17,8 @@ interface MissionItemProps {
 }
 
 const MissionItem = ({ className = "", mission }: MissionItemProps) => {
+  const [isAnimating, setIsAnimating] = useState(false);
+
   const { checkIsFavorite, toggleFavorite } = useFavorites();
   const { playEffect } = useAudioEffects();
 
@@ -37,11 +40,19 @@ const MissionItem = ({ className = "", mission }: MissionItemProps) => {
           <div className="flex items-center space-x-2 ">
             {/** Favorite */}
             <button
+              disabled={isAnimating}
               title={isFavorited ? "Remove from favorites" : "Add to favorites"}
               onClick={() => {
                 playEffect(saveAudio, { volume: 0.05 });
                 toggleFavorite(mission.id);
+
+                if (isFavorited) return;
+                setIsAnimating(true);
+                setTimeout(() => setIsAnimating(false), 300);
               }}
+              className={`transition ${
+                isAnimating ? "scale-125" : "scale-100"
+              }`}
             >
               <img
                 loading="lazy"
