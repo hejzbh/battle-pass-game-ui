@@ -65,7 +65,7 @@ const RewardCard = ({
       )}
 
       <div
-        className={`bg-white/10 border-[1px]  border-white/30 p-4 min-w-[230px] min-h-[280px] overflow-visible relative ${className}  ${
+        className={`bg-white/10 border-[1px]  border-white/30 p-4 min-w-[230px] h-[285px] overflow-visible relative ${className}  ${
           isRotating ? "animate-spin-claim" : ""
         }`}
         style={{
@@ -75,12 +75,12 @@ const RewardCard = ({
       >
         <Text
           size="xs"
-          className="text-white min-h-[35px]  uppercase font-bold text-center max-w-[80%] text-wrap mx-auto"
+          className="text-white min-h-[40px] uppercase font-bold text-center max-w-[80%] text-wrap mx-auto"
         >
           {item.name}
         </Text>
 
-        <div className="mt-5 flex flex-col justify-center items-center">
+        <div className="mt-5 flex flex-col justify-start items-center  h-full">
           <img
             src={item.imageUrl}
             alt="Reward"

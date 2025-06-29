@@ -12,6 +12,7 @@ type TabItem = {
 
 type TabsProps = {
   tabs: TabItem[];
+  ExtraComponent?: React.ReactElement;
   className?: string;
   tabActiveClassName?: string;
   tabButtonClassName?: string;
@@ -22,6 +23,7 @@ const Tabs: React.FC<TabsProps> = ({
   tabs,
   className = "",
   tabActiveClassName,
+  ExtraComponent,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { playEffect } = useAudioEffects();
@@ -60,6 +62,8 @@ const Tabs: React.FC<TabsProps> = ({
           );
         })}
       </div>
+
+      {ExtraComponent && ExtraComponent}
 
       {/* Active Tab Content */}
       <div

@@ -67,7 +67,7 @@ const Slider: React.FC<SliderProps> = ({
       {/* Horizontalni scroll container */}
       <div
         ref={containerRef}
-        className="overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth  rounded p-2"
+        className="overflow-x-auto overflow-y-hidden  scrollbar-hide whitespace-nowrap scroll-smooth  rounded p-2"
         style={{ scrollBehavior: "smooth" }}
       >
         {children}
