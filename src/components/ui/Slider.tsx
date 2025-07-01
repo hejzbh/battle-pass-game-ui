@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import nextIcon from "@/assets/images/next-icon.png";
 import backIcon from "@/assets/images/back-icon.webp";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 interface SliderProps {
   className?: string;
@@ -30,9 +31,22 @@ const Slider: React.FC<SliderProps> = ({
     }
   };
 
+  const handleWheel = (e: React.WheelEvent) => {
+    if (containerRef.current) {
+      // Only if vertical scroll
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        containerRef.current.scrollBy({
+          left: e.deltaY * 4.2,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
   return (
     <div className={`w-full ${className}`}>
-      {/* Strelice na desnoj strani iznad contenta */}
+      {/* Strelice */}
       <div className="flex justify-end mb-2 space-x-2 pr-10">
         <button
           title="Back"
@@ -64,13 +78,15 @@ const Slider: React.FC<SliderProps> = ({
         </button>
       </div>
 
-      {/* Horizontalni scroll container */}
-      <div
-        ref={containerRef}
-        className="overflow-x-auto overflow-y-hidden  scrollbar-hide whitespace-nowrap scroll-smooth  rounded p-2"
-        style={{ scrollBehavior: "smooth" }}
-      >
-        {children}
+      {/* Wrap ScrollContainer in a <div> with onWheel */}
+      <div onWheel={handleWheel}>
+        <ScrollContainer
+          innerRef={containerRef}
+          className="overflow-x-auto overflow-y-hidden scrollbar-hide whitespace-nowrap rounded p-2"
+          vertical={false}
+        >
+          {children}
+        </ScrollContainer>
       </div>
     </div>
   );
