@@ -21,9 +21,17 @@ const BattlePass = ({
 }: BattlePassProps) => {
   const { week } = useUserProgress();
   return (
-    <section className={`w-full h-screen fixed top-0 left-0 ${className}`}>
-      <ImageGradient imageSrc={bpassBackgroundImage} />
-      <Header onClose={onClose} />
+    <section className={`w-full h-screen fixed top-0 left-0 z-10 ${className}`}>
+      <ImageGradient imageSrc={bpassBackgroundImage} includeCustomGradient />
+      <Header
+        onClose={onClose}
+        options={{
+          showInfoButton: true,
+          showLevel: true,
+          showSeason: true,
+          showWeek: true,
+        }}
+      />
       <div className="grid grid-cols-[30%,68%] 1520px:grid-cols-[25%,73%]  justify-between gap-10 mt-[40px] pl-10 h-full">
         <Tabs
           tabs={[

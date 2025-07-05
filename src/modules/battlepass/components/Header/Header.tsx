@@ -5,9 +5,15 @@ import HeaderActions from "./HeaderActions";
 interface HeaderProps {
   className?: string;
   onClose: () => void;
+  options?: {
+    showSeason?: boolean;
+    showWeek?: boolean;
+    showLevel?: boolean;
+    showInfoButton?: boolean;
+  };
 }
 
-const Header = ({ className = "", onClose }: HeaderProps) => {
+const Header = ({ className = "", onClose, options = {} }: HeaderProps) => {
   return (
     <header
       className={` text-white flex items-start justify-between px-10 ${className}`}
@@ -37,10 +43,13 @@ const Header = ({ className = "", onClose }: HeaderProps) => {
       </div>
 
       {/** User Progress */}
-      <UserProgress className="relative ml-[-100px] 1520px:ml-[-150px] flex-[1]" />
+      <UserProgress
+        className="relative ml-[-100px] 1520px:ml-[-150px] flex-[1]"
+        {...options}
+      />
 
       {/** Other (information , esc & more) */}
-      <HeaderActions onESC={onClose} />
+      <HeaderActions showInfoButton={options.showInfoButton} onESC={onClose} />
     </header>
   );
 };

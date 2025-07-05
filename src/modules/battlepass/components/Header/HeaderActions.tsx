@@ -4,12 +4,14 @@ import InfoButton from "./InfoButton";
 
 interface HeaderActionsProps {
   className?: string;
+  showInfoButton?: boolean;
   onESC?: () => void;
 }
 
 const HeaderActions = ({
   className = "",
   onESC = () => {},
+  showInfoButton,
 }: HeaderActionsProps) => {
   function escape(e: KeyboardEvent) {
     if (e.key !== "Escape") return;
@@ -28,7 +30,8 @@ const HeaderActions = ({
       className={`flex items-start space-x-[50px] 2xl:space-x-[130px] ${className}`}
     >
       {/** */}
-      <InfoButton />
+
+      {showInfoButton && <InfoButton />}
 
       {/** ESC */}
       <button
